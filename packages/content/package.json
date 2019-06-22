@@ -1,0 +1,24 @@
+{
+  "name": "content",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start:dev": "nodemon ./src/index.ts",
+    "start": "node ./dist/index.js",
+    "build": "yarn run build:app && yarn run build:docker",
+    "build:app": "tsc",
+    "build:docker": "docker build -t content ."
+  },
+  "dependencies": {
+    "apollo-server": "2.6.4",
+    "@apollo/federation": "0.6.4",
+    "graphql": "14.3.1",
+    "ts-node": "8.3.0",
+    "nodemon": "1.19.1",
+    "typescript": "3.5.2",
+    "@types/graphql": "14.2.1"
+  },
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "graphql-microfrontend-demo",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "description": "A monorepo demonstrating the use of graphql in a microfrontend environment",
+  "main": "index.js",
+  "scripts": {
+    "start": "docker-compose up",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "lerna": "^3.15.0"
+  },
+  "author": "Johannes Kling",
+  "license": "MIT"
+}
