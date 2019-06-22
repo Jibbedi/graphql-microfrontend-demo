@@ -1,8 +1,6 @@
 import { ApolloServer } from "apollo-server";
 import { ApolloGateway } from "@apollo/gateway";
 
-console.log(1);
-
 const gateway = new ApolloGateway({
   serviceList: [
     { name: "content", url: "http://content:4000" },
