@@ -5,15 +5,11 @@ services:
     build: ./packages/content
     ports:
       - 4001:4000
-    networks:
-      - backend
   customer:
     container_name: customer-service
     build: ./packages/customer
     ports:
       - 4002:4000
-    networks:
-      - backend
   gateway:
     container_name: gql-gateway
     build: ./packages/gateway
@@ -22,8 +18,3 @@ services:
     links:
       - content
       - customer
-    networks:
-      - backend
-networks:
-  backend:
-    driver: "bridge"
