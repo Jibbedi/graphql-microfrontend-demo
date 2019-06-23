@@ -10,6 +10,11 @@ services:
     build: ./packages/customer
     ports:
       - 4002:4000
+  search:
+    container_name: search-service
+    build: ./packages/search
+    ports:
+      - 4003:4000
   gateway:
     container_name: gql-gateway
     build: ./packages/gateway
@@ -18,3 +23,4 @@ services:
     links:
       - content
       - customer
+      - search

@@ -1,35 +1,34 @@
 import { ApolloServer, gql } from "apollo-server";
 import { buildFederatedSchema } from "@apollo/federation";
 
-const hotels = {
-  1: {
-    name: "Cesar's Palace",
-    rating: 5,
-    latitude: 10.111,
-    longitude: 10.111
+const hotels = [
+  {
+    id: "1",
+    price: 199.0
   },
-  2: {
-    name: "Venetian",
-    rating: 5,
-    latitude: 10.111,
-    longitude: 10.111
+  {
+    id: "2",
+    price: 299.0
   }
-};
+];
 
 const typeDefs = gql`
-  extend type Hotel @key(fields: "id") {
-    id: ID! @external
-    name: String!
-    rating: Int!
-    latitude: Float!
-    longitude: Float!
+  type Hotel @key(fields: "id") {
+    id: ID!
+    price: Float!
+  }
+  type Query {
+    getSearchResults: [Hotel]
   }
 `;
 
 const resolvers = {
+  Query: {
+    getSearchResults: () => hotels
+  },
   Hotel: {
     __resolveReference: reference => {
-      return hotels[reference.id];
+      return hotels.find(hotel => hotel.id === reference.id);
     }
   }
 };

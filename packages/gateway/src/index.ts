@@ -4,6 +4,7 @@ import { ApolloGateway } from "@apollo/gateway";
 const gateway = new ApolloGateway({
   serviceList: [
     { name: "content", url: "http://content:4000" },
+    { name: "search", url: "http://search:4000" },
     { name: "customer", url: "http://customer:4000" }
   ]
 });
