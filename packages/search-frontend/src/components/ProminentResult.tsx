@@ -31,7 +31,7 @@ const ProminentResult: React.FC<ProminentResultFragment> = ({ hotel }) => {
           </Box>
         </Box>
         <Flex alignItems="center">
-          <Button>{formatMoney(hotel.price)}</Button>
+          <Button>{formatMoney(hotel.price)} €</Button>
         </Flex>
       </Flex>
     </Box>
