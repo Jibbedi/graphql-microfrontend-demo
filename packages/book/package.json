@@ -1,5 +1,5 @@
 {
-  "name": "customer",
+  "name": "book",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -8,7 +8,7 @@
     "start": "node ./dist/index.js",
     "build": "yarn run build:app && yarn run build:docker",
     "build:app": "tsc",
-    "build:docker": "docker build -t customer ."
+    "build:docker": "docker build -t book ."
   },
   "dependencies": {
     "apollo-server": "2.6.4",

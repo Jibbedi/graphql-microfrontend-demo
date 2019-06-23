@@ -5,9 +5,9 @@ services:
     build: ./packages/content
     ports:
       - 4001:4000
-  customer:
-    container_name: customer-service
-    build: ./packages/customer
+  book:
+    container_name: book-service
+    build: ./packages/book
     ports:
       - 4002:4000
   search:
@@ -22,5 +22,5 @@ services:
       - 4000:4000
     links:
       - content
-      - customer
+      - book
       - search
