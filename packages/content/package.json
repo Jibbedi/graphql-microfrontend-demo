@@ -11,7 +11,7 @@
     "build:docker": "docker build -t content ."
   },
   "dependencies": {
-    "apollo-server": "2.6.4",
+    "apollo-server": "2.14.2",
     "@apollo/federation": "0.6.4",
     "graphql": "14.3.1",
     "ts-node": "8.3.0",
