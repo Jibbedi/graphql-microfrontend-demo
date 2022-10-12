@@ -11,7 +11,7 @@
     "build:docker": "docker build -t gateway ."
   },
   "dependencies": {
-    "apollo-server": "2.6.4",
+    "apollo-server": "2.25.4",
     "@apollo/gateway": "0.6.7",
     "graphql": "14.3.1",
     "ts-node": "8.3.0",
